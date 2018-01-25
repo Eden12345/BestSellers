@@ -51,19 +51,32 @@
           {"name": "Super Mario Bros.", "size": 40240, "year": 1985},
           {"name": "Mario Kart Wii", "size": 37020, "year": 2008},
           {"name": "New Super Mario Bros.", "size": 30800, "year": 2006},
-          {"name": "New Super Mario Bros. Wii", "size": 30110, "year": 2009}
-          ]}
-        ]
-      },
-      {"name": "Nintendo EAD/R&D",
-      "children": [
-        {"name": "Mario/Mario Kart",
+          {"name": "New Super Mario Bros. Wii", "size": 30110, "year": 2009},
+          {"name": "Mario Kart DS", "size": 23600, "year": 2005},
+          {"name": "Super Mario World", "size": 20610, "year": 1990},
+          {"name": "Super Mario Land", "size": 18140, "year": 1989},
+          {"name": "Super Mario Bros. 3", "size": 17280, "year": 1988},
+          {"name": "Mario Kart 7", "size": 15950, "year": 2011}
+          ]
+        },
+        {"name": "Wii Games",
         "children": [
-          {"name": "Super Mario Bros.", "size": 40240, "year": 1985},
-          {"name": "Mario Kart Wii", "size": 37020, "year": 2008},
-          {"name": "New Super Mario Bros.", "size": 30800, "year": 2006},
-          {"name": "New Super Mario Bros. Wii", "size": 30110, "year": 2009}
-          ]}
+          {"name": "Wii Sports", "size": 82830, "year": 2006},
+          {"name": "Wii Sports Resort", "size": 33060, "year": 2009},
+          {"name": "Wii Play", "size": 28020, "year": 2006},
+          {"name": "Wii Fit", "size": 22670, "year": 2007},
+          {"name": "Wii Fit Plus", "size": 21130, "year": 2009}
+          ]
+        },
+        {"name": "Game Freak",
+        "children": [
+          {"name": "Pokémon Red and Blue", "size": 31380, "year": 1996},
+          {"name": "Wii Sports Resort", "size": 33060, "year": 2009},
+          {"name": "Wii Play", "size": 28020, "year": 2006},
+          {"name": "Wii Fit", "size": 22670, "year": 2007},
+          {"name": "Wii Fit Plus", "size": 21130, "year": 2009}
+          ]
+        }
         ]
       }
       ]
