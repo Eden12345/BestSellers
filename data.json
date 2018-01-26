@@ -46,7 +46,7 @@
     "children": [
       {"name": "Nintendo EAD/R&D",
       "children": [
-        {"name": "Mario/Mario Kart",
+        {"name": "Mario/Mario Kart Franchise",
         "children": [
           {"name": "Super Mario Bros.", "size": 40240, "year": 1985},
           {"name": "Mario Kart Wii", "size": 37020, "year": 2008},
@@ -59,7 +59,7 @@
           {"name": "Mario Kart 7", "size": 15950, "year": 2011}
           ]
         },
-        {"name": "Wii Games",
+        {"name": "Wii Games Franchise",
         "children": [
           {"name": "Wii Sports", "size": 82830, "year": 2006},
           {"name": "Wii Sports Resort", "size": 33060, "year": 2009},
@@ -68,18 +68,92 @@
           {"name": "Wii Fit Plus", "size": 21130, "year": 2009}
           ]
         },
-        {"name": "Game Freak",
+        {"name": "Duck Hunt", "size": 28300, "year": 1984}
+        ]
+      },
+      {"name": "Game Freak",
+      "children": [
+        {"name": "Pokémon Franchise",
         "children": [
           {"name": "Pokémon Red and Blue", "size": 31380, "year": 1996},
-          {"name": "Wii Sports Resort", "size": 33060, "year": 2009},
-          {"name": "Wii Play", "size": 28020, "year": 2006},
-          {"name": "Wii Fit", "size": 22670, "year": 2007},
-          {"name": "Wii Fit Plus", "size": 21130, "year": 2009}
+          {"name": "Pokémon Gold and Silver", "size": 23100, "year": 1999},
+          {"name": "Pokémon Diamond and Pearl", "size": 17670, "year": 2006},
+          {"name": "Pokémon Ruby and Sapphire", "size": 16220, "year": 2002},
+          {"name": "Pokémon X and Y", "size": 16200, "year": 2013},
+          {"name": "Pokémon Sun and Moon", "size": 15910, "year": 2016},
+          {"name": "Pokémon Black and White", "size": 15640, "year": 2010}
           ]
         }
         ]
       }
       ]
+    },
+
+    {"name": "Bethesda Softworks",
+    "children": [
+      {"name": "Bethesda Game Studios",
+      "children": [
+        {"name": "The Elder Scrolls V: Skyrim", "size": 30000, "year": 2011}
+        ]
+      }
+      ]
+    },
+
+    {"name": "Blizzard Entertainment",
+    "children": [
+      {"name": "Blizzard Entertainment",
+      "children": [
+        {"name": "Diablo Franchise",
+          "children": [
+            {"name": "Diablo III", "size": 30000, "year": 2012}
+          ]
+        }
+      ]
+      }
+      ]
+    },
+
+
+    {"name": "Activision",
+    "children": [
+      {"name": "Infinity Ward",
+      "children": [
+        {"name": "Call of Duty Franchise",
+        "children": [
+          {"name": "Call of Duty: Modern Warfare 3", "size": 26500, "year": 2011},
+          {"name": "Call of Duty: Modern Warfare 2", "size": 22700, "year": 2009},
+          {"name": "Call of Duty: Ghosts", "size": 19000, "year": 2013},
+          {"name": "Call of Duty 4: Modern Warfare", "size": 15700, "year": 2007}
+          ]}
+        ]
+      },
+      {"name": "Treyarch",
+      "children": [
+        {"name": "Call of Duty Franchise",
+        "children": [
+          {"name": "Call of Duty: Black Ops", "size": 26200, "year": 2010},
+          {"name": "Call of Duty: Black Ops II", "size": 24200, "year": 2012},
+          {"name": "Call of Duty: World at War", "size": 15700, "year": 2008}
+          ]}
+        ]
+      }
+      ]
+    },
+
+    {"name": "Microsoft Studios",
+      "children": [
+        {"name": "Good Science Studio",
+          "children": [
+            {"name": "Kinect Adventures!", "size": 24000, "year": 2010}
+          ]
+        }
+      ]
+    },
+
+    {"name": "Bluehole",
+    "children": [
+        {"name": "PlayerUnknown's Battlegrounds", "size": 24000, "year": 2017}
+        ]
     },
 
     {"name": "Number None",
