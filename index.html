@@ -1,158 +1,36 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-
-h1 {
-  font-family: sans-serif;
-  font-size: 60px;
-  font-weight: lighter;
-  text-align: center;
-}
-
-.node {
-  cursor: pointer;
-}
-
-.node {
-  stroke: rgb(75, 67, 114);
-  stroke-width: 1px;
-}
-
-.node:hover {
-  stroke: rgb(74, 192, 201);
-  stroke-width: 2px;
-}
-
-.node--leaf {
-  fill: white;
-}
-
-.label {
-  /* font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif; */
-  font-family: sans-serif;
-  font-size: 14px;
-  text-anchor: middle;
-  text-shadow: 0 0.5px 0 white, 0.5px 0 0 white, -0.5px 0 0 white, 0 -0.5px 0 white;
-}
-
-.label,
-.node--root,
-.node--leaf {
-  pointer-events: none;
-}
-
-.wrapper {
-  height: 900px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-svg {
-  border-radius: 20px;
-}
+<head>
+  <meta charset="utf-8">
+  <title>BestSellers</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
 
-</style>
+<body>
+  <h1>BestSellers</h1>
 
-<h1>Best Selling Video Games of All Time</h1>
+  <div class="wrapper">
+    <svg width="900" height="900"></svg>
+  </div>
 
-<div class="wrapper">
-  <svg width="900" height="900"></svg>
-</div>
+  <div class="color-key">
+    <!-- Besides saying what the fill and border colors indicate, also explain that if there is only one circle bordering a game node that the game was released independently by the developer (which is only 3 games in the visualization) -->
+  </div>
 
-<div class="color-key">
-  <!-- Besides saying what the fill and border colors indicate, also explain that if there is only one circle bordering a game node that the game was released independently by the developer (which is only 3 games in the visualization) -->
-</div>
+  <section>
 
-<section>
+    <!-- In your color key, note that you don't count games as franchise games if they are the first installment of their franchise and are the only game on the list in their franchise (these games aren't only popular due to the "franchise effect") -->
 
-  <!-- In your color key, note that you don't count games as franchise games if they are the first installment of their franchise and are the only game on the list in their franchise (these games aren't only popular due to the "franchise effect") -->
+    <p>This data visualization is designed to illustrate how consolidated video game sales are amongst large publishers and their franchises. It breaks down each of the top 50 best selling video games by its sales figure, developer, publisher, and indicates whether or not it is part of a franchise.<br><br>The only indendently released video games on the list are Mojang's "Minecraft" (at 144 million units sold) and Bluehole's "PlayerUnknown's Battlegrounds" (at 24 million units sold). The former is only topped only by Spectrum HolyByte's "Tetris" (at 170 million units sold). For contrast, I also added the independently released video games "Braid" and "SOMA" (both at almost 1/2 million copies sold)[1][2].<br><br>Rockstar GTA:155,000,000; Nintendo Mario/Mario Kart:233750000; Activision COD:150000000. Some sources, however, estimate that these series are .. .. .. respectively (see Wikipedia article [3]).</p>
 
-  <p>This data visualization is designed to illustrate how consolidated video game sales are amongst large publishers and their franchises. It breaks down each of the top 50 best selling video games by its sales figure, developer, publisher, and indicates whether or not it is part of a franchise.<br><br>The only indendently released video games on the list are Mojang's "Minecraft" (at 144 million units sold) and Bluehole's "PlayerUnknown's Battlegrounds" (at 24 million units sold). The former is only topped only by Spectrum HolyByte's "Tetris" (at 170 million units sold). For contrast, I also added the independently released video games "Braid" and "SOMA" (both at almost 1/2 million copies sold)[1][2].<br><br>Rockstar GTA:155,000,000; Nintendo Mario/Mario Kart:233750000; Activision COD:150000000. Some sources, however, estimate that these series are .. .. .. respectively (see Wikipedia article [3]).</p>
+    <p>NOTES ON OMISSIONS FROM THIS LIST</p>
 
-  <p>NOTES ON OMISSIONS FROM THIS LIST</p>
+    <p>This visualization focuses only on units sold because of the difficulty in comparing revenue between such differently priced products. Activion's "Guitar Hero" franchise, for example, is notable for generating large amounts of revenue, yet no single installment in the series had enough copies sold to make it onto the list of the 50 best selling video games [4][5].<br><br>While digital downloads are considered in these figures, only paid downloads are counted. This means that some mobile games with high download rates are not included if they only use an in-app purchase payment scheme (ie. "Candy Crush") [6]. There are also games whose paid downloads are difficult to track as they were free to download for multiple periods of time, such as usTwo's "Monument Valley" [7].
+    </p>
 
-  <p>This visualization focuses only on units sold because of the difficulty in comparing revenue between such differently priced products. Activion's "Guitar Hero" franchise, for example, is notable for generating large amounts of revenue, yet no single installment in the series had enough copies sold to make it onto the list of the 50 best selling video games [4][5].<br><br>While digital downloads are considered in these figures, only paid downloads are counted. This means that some mobile games with high download rates are not included if they only use an in-app purchase payment scheme (ie. "Candy Crush") [6]. There are also games whose paid downloads are difficult to track as they were free to download for multiple periods of time, such as usTwo's "Monument Valley" [7].
-  </p>
+  </section>
 
-</section>
+</body>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
-
-<script>
-
-var svg = d3.select("svg"),
-    margin = 20,
-    diameter = +svg.attr("width"),
-    g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
-
-var color = d3.scaleLinear()
-    .domain([-10, 10])
-    .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
-    .interpolate(d3.interpolateHcl);
-
-var pack = d3.pack()
-    .size([diameter - margin, diameter - margin])
-    .padding(5);
-
-d3.json("data.json", function(error, root) {
-  if (error) throw error;
-
-  root = d3.hierarchy(root)
-      .sum(function(d) { return d.size; })
-      .sort(function(a, b) { return b.value - a.value; });
-
-  var focus = root,
-      nodes = pack(root).descendants(),
-      view;
-
-  var circle = g.selectAll("circle")
-    .data(nodes)
-    .enter().append("circle")
-      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
-      .style("fill", function(d) { return d.children ? color(d.depth * 4) : null; })
-      .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
-
-  var text = g.selectAll("text")
-    .data(nodes)
-    .enter().append("text")
-      .attr("class", "label")
-      .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
-      .style("display", function(d) { return d.parent === root ? "inline" : "none"; })
-      .text(function(d) { return d.data.name; });
-
-  var node = g.selectAll("circle,text");
-
-  svg
-      .style("background", color(-3))
-      .on("click", function() { zoom(root); });
-
-  zoomTo([root.x, root.y, root.r * 2 + margin]);
-
-  function zoom(d) {
-    var focus0 = focus; focus = d;
-
-    var transition = d3.transition()
-        .duration(d3.event.altKey ? 7500 : 750)
-        .tween("zoom", function(d) {
-          var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
-          return function(t) { zoomTo(i(t)); };
-        });
-
-    transition.selectAll("text")
-      .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
-        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
-        .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
-        .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
-  }
-
-  function zoomTo(v) {
-    var k = diameter / v[2]; view = v;
-    node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
-    circle.attr("r", function(d) { return d.r * k; });
-  }
-});
-
-</script>
+<script src="visualization.js"> </script>

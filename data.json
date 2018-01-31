@@ -44,7 +44,7 @@
 
     {"name": "Nintendo",
     "children": [
-      {"name": "Nintendo EAD/R&D",
+      {"name": "Nintendo R&D - SPD",
       "children": [
         {"name": "Mario/Mario Kart Franchise",
         "children": [
@@ -68,7 +68,8 @@
           {"name": "Wii Fit Plus", "size": 21130, "year": 2009}
           ]
         },
-        {"name": "Duck Hunt", "size": 28300, "year": 1984}
+        {"name": "Duck Hunt", "size": 28300, "year": 1984},
+        {"name": "Nintendogs", "size": 23960, "year": 2005}
         ]
       },
       {"name": "Game Freak",
@@ -89,11 +90,25 @@
       ]
     },
 
+    {"name": "Sega",
+    "children": [
+      {"name": "Konami",
+      "children": [
+        {"name": "The Elder Scrolls V: Skyrim", "size": 30000, "year": 2011}
+        ]
+      }
+      ]
+    },
+
     {"name": "Bethesda Softworks",
     "children": [
       {"name": "Bethesda Game Studios",
       "children": [
-        {"name": "The Elder Scrolls V: Skyrim", "size": 30000, "year": 2011}
+        {"name": "The Elder Scrolls",
+        "children": [
+          {"name": "The Elder Scrolls V: Skyrim", "size": 30000, "year": 2011}
+          ]
+        }
         ]
       }
       ]

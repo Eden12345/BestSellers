@@ -1,0 +1,50 @@
+h1 {
+  font-family: sans-serif;
+  font-size: 60px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.node {
+  stroke: rgb(75, 67, 114);
+  stroke-width: 1px;
+}
+
+.node:hover {
+  stroke: rgb(74, 192, 201);
+  stroke-width: 2px;
+}
+
+.node--leaf {
+  fill: white;
+}
+
+.label {
+  /* font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: sans-serif;
+  font-size: 14px;
+  text-anchor: middle;
+  text-shadow: 0 0.5px 0 white, 0.5px 0 0 white, -0.5px 0 0 white, 0 -0.5px 0 white;
+}
+
+.label,
+.node--root,
+.node--leaf {
+  pointer-events: none;
+}
+
+.wrapper {
+  height: 900px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  border-radius: 20px;
+}
