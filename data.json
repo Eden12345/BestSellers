@@ -252,12 +252,6 @@
     "children": [
         {"name": "Braid", "size": 450, "year": 2008}
         ]
-    },
-
-    {"name": "Frictional Games",
-    "children": [
-        {"name": "SOMA", "size": 450, "year": 2015}
-        ]
     }
 
   ]
