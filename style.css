@@ -1,3 +1,11 @@
+/* background and border of bundles: #4ac0c9 */
+/* outer circle: #33a7c2 */
+/* publisher: #3386b0 */
+/* develoer: #426495 */
+/* franchise: rgb(75, 67, 114) */
+/* game released before 2000: lightgrey */
+/* game released before 2000: white */
+
 .node {
   cursor: pointer;
 }
@@ -8,12 +16,21 @@
 }
 
 .node:hover {
-  stroke: rgb(74, 192, 201);
-  stroke-width: 2px;
+  stroke: white;
+  stroke-width: 1px;
 }
 
-.node--leaf {
+.node--end {
+  fill: lightgrey;
+}
+
+.node--end.millennial {
   fill: white;
+}
+
+.node--end.bundle {
+  stroke: #4ac0c9;
+  stroke-width: 2px;
 }
 
 .label {
@@ -24,17 +41,9 @@
 }
 
 .label,
-.node--root,
-.node--leaf {
+.node--start,
+.node--end {
   pointer-events: none;
-}
-
-.wrapper {
-  height: 900px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 h1 {
@@ -54,12 +63,76 @@ body {
   align-items: center;
 }
 
+section.wrapper {
+  height: 900px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 svg {
   border-radius: 20px;
   font-weight: normal;
 }
 
-section {
+section.color-key {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 502px;
+  margin-bottom: 50px;
+}
+
+section.color-key > div {
+  display: flex;
+  align-items: center;
+}
+
+section.color-key > div > div {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid #4b4372;
+  background-color: white;
+}
+
+section.color-key p {
+  padding-left: 10px;
+}
+
+#publisher-color {
+  background-color: #3386b0;
+}
+
+#developer-color {
+  background-color: #426495;
+}
+
+#franchise-color {
+  background-color: #4b4372;
+}
+
+#before-2000-color {
+  background-color: lightgrey;
+}
+
+#after-2000-color {
+}
+
+#bundle-color {
+  border: 2px solid #4ac0c9;
+}
+
+/* background and border of bundles: #4ac0c9 */
+/* outer circle: #33a7c2 */
+/* publisher: #3386b0 */
+/* develoer: #426495 */
+/* franchise: #4b4372 */
+/* game released before 2000: lightgrey */
+/* game released before 2000: white */
+
+section.notes {
   margin-top: 40px;
   width: 900px;
 }

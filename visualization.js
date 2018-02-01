@@ -4,6 +4,9 @@ var svg = d3.select("svg"),
     g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
 var color = d3.scaleLinear()
+
+    // CHANGE COLOR RANGE TO MAKE FRANCHISE RELEASES MORE APPARENT
+
     .domain([-10, 10])
     .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
     .interpolate(d3.interpolateHcl);
@@ -26,7 +29,12 @@ d3.json("data.json", function(error, root) {
   var circle = g.selectAll("circle")
     .data(nodes)
     .enter().append("circle")
-      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+      .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--end" : "node node--start"; })
+
+      // CHANGE COLOR AND OUTLINE OF LEAF NODES DEPENDING ON RELEASE BUNDLE AND YEAR
+
+      .classed("bundle", function(d) { return d.data.bundle ? true : false; })
+      .classed("millennial", function(d) { return d.data.year >= 2000 ? true : false; })
       .style("fill", function(d) { return d.children ? color(d.depth * 4) : null; })
       .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
 
@@ -41,8 +49,11 @@ d3.json("data.json", function(error, root) {
   var node = g.selectAll("circle,text");
 
   svg
-      .style("background", color(-3))
-      .on("click", function() { zoom(root); });
+
+    // GIVE BACKGROUND A COLOR
+
+    .style("background", color(-3))
+    .on("click", function() { zoom(root); });
 
   zoomTo([root.x, root.y, root.r * 2 + margin]);
 
@@ -50,7 +61,10 @@ d3.json("data.json", function(error, root) {
     var focus0 = focus; focus = d;
 
     var transition = d3.transition()
-        .duration(d3.event.altKey ? 7500 : 750)
+
+        // MAKE TRANSITION RATE SMOOTHER (FOR FIREFOX USERS)
+
+        .duration(d3.event.altKey ? 7500 : 1000)
         .tween("zoom", function(d) {
           var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
           return function(t) { zoomTo(i(t)); };

@@ -8,21 +8,51 @@
 
 
 <body>
-  <h1>BestSellers</h1>
+  <h1>Best Sellers</h1>
 
-  <div class="wrapper">
+  <!-- background and border of bundles: #4ac0c9
+  outer circle: #33a7c2
+  publisher: #3386b0
+  developer: #426495
+  franchise: rgb(75, 67, 114)
+  game released before 2000: lightgrey
+  game released before 2000: white -->
+
+  <section class="color-key">
+    <div id="publisher">
+      <div id="publisher-color"></div>
+      <p>Publisher</p>
+    </div>
+    <div id="developer">
+      <div id="developer-color"></div>
+      <p>Developer</p>
+    </div>
+    <div id="franchise">
+      <div id="franchise-color"></div>
+      <p>Franchise</p>
+    </div>
+    <div id="before-2000">
+      <div id="before-2000-color"></div>
+      <p>Game Released Before the Year 2000</p>
+    </div>
+    <div id="after-2000">
+      <div id="after-2000-color"></div>
+      <p>Game Released During or After the Year 2000</p>
+    </div>
+    <div id="bundle-key">
+      <div id="bundle-color"></div>
+      <p>(light blue outline) Game Released as Part of a Console Bundle</p>
+    </div>
+
+    <p>(Note: if there is only one bubble/node around a game, that means that the developer released the game independently of a publisher)
+    </p>
+  </section>
+
+  <section class="wrapper">
     <svg width="900" height="900"></svg>
-  </div>
+  </section>
 
-  <div class="color-key">
-    <!-- Besides saying what the fill and border colors indicate, also explain that if there is only one circle bordering a game node that the game was released independently by the developer (which is only 3 games in the visualization) -->
-
-    <!-- Note that you don't count games as franchise games if they are the first installment of their franchise and are the only game on the list in their franchise (these games aren't only popular due to the "franchise effect") -->
-
-    <!-- Note the black border for games released after 2000, and the white color of games released with a console package -->
-  </div>
-
-  <section>
+  <section class="notes">
 
     <p>This data visualization is designed to illustrate how consolidated video game sales are amongst large publishers and their franchises. It breaks down each of the top 52 best selling video games by its unit sales figure along with its original developer and publisher. It also indicates whether or not each game is part of a franchise.<br><br>The only indendently released video games on the list are Mojang's "Minecraft" (at 144 million units sold) and Bluehole's "PlayerUnknown's Battlegrounds" (at 24 million units sold). The former is only topped only by Spectrum HolyByte's "Tetris" (at 170 million units sold). For contrast, I also added the independently released video game "Braid", arguably the 2nd best selling independly released video game ever at almost 1/2 million copies sold [1][2].<br><br>If you add up the units sold for each installment of the best selling franchises from Nintendo, Activision, and Rockstar Games, they are as follows: 233,750,000 (Mario/Mario Kart); 224,990,000 (Call of Duty); 155,000,000 (Grand Theft Auto). Some sources, however, estimate that these series are .. .. .. respectively (see Wikipedia article [3]).
     </p>
