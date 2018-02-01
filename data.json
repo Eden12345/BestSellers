@@ -6,7 +6,7 @@
     "children": [
       {"name": "Elektronorgtechnica",
       "children": [
-        {"name": "Tetris", "size": 170000, "year": 1984}
+        {"name": "Tetris", "size": 170000, "year": 1984, "bundle": true}
         ]
       }
       ]
@@ -14,7 +14,7 @@
 
     {"name": "Mojang",
     "children": [
-        {"name": "Minecraft", "size": 144000, "year": 2011}
+        {"name": "Minecraft", "size": 144000, "year": 2011, "bundle": true}
         ]
     },
 
@@ -24,7 +24,7 @@
       "children": [
         {"name": "Grand Theft Auto Franchise",
         "children": [
-          {"name": "Grand Theft Auto V", "size": 85000, "year": 2013},
+          {"name": "Grand Theft Auto V", "size": 85000, "year": 2013, "bundle": true},
           {"name": "Grand Theft Auto: San Andreas", "size": 27500, "year": 2004},
           {"name": "Grand Theft Auto IV", "size": 25000, "year": 2008},
           {"name": "Grand Theft Auto: Vice City", "size": 17500, "year": 2002}
@@ -44,32 +44,33 @@
 
     {"name": "Nintendo",
     "children": [
-      {"name": "Nintendo R&D - SPD",
+      {"name": "Nintendo R&D - EPD",
       "children": [
         {"name": "Mario/Mario Kart Franchise",
         "children": [
-          {"name": "Super Mario Bros.", "size": 40240, "year": 1985},
-          {"name": "Mario Kart Wii", "size": 37020, "year": 2008},
+          {"name": "Super Mario Bros.", "size": 40240, "year": 1985 , "bundle": true},
+          {"name": "Mario Kart Wii", "size": 37020, "year": 2008, "bundle": true},
           {"name": "New Super Mario Bros.", "size": 30800, "year": 2006},
-          {"name": "New Super Mario Bros. Wii", "size": 30110, "year": 2009},
-          {"name": "Mario Kart DS", "size": 23600, "year": 2005},
-          {"name": "Super Mario World", "size": 20610, "year": 1990},
+          {"name": "New Super Mario Bros. Wii", "size": 30110, "year": 2009, "bundle": true},
+          {"name": "Mario Kart DS", "size": 23600, "year": 2005, "bundle": true},
+          {"name": "Super Mario World", "size": 20610, "year": 1990, "bundle": true},
           {"name": "Super Mario Land", "size": 18140, "year": 1989},
-          {"name": "Super Mario Bros. 3", "size": 17280, "year": 1988},
-          {"name": "Mario Kart 7", "size": 15950, "year": 2011}
+          {"name": "Super Mario Bros. 3", "size": 17280, "year": 1988, "bundle": true},
+          {"name": "Mario Kart 7", "size": 15950, "year": 2011, "bundle": true}
           ]
         },
         {"name": "Wii Games Franchise",
         "children": [
-          {"name": "Wii Sports", "size": 82830, "year": 2006},
-          {"name": "Wii Sports Resort", "size": 33060, "year": 2009},
+          {"name": "Wii Sports", "size": 82830, "year": 2006, "bundle": true},
+          {"name": "Wii Sports Resort", "size": 33060, "year": 2009, "bundle": true},
           {"name": "Wii Play", "size": 28020, "year": 2006},
           {"name": "Wii Fit", "size": 22670, "year": 2007},
           {"name": "Wii Fit Plus", "size": 21130, "year": 2009}
           ]
         },
-        {"name": "Duck Hunt", "size": 28300, "year": 1984},
-        {"name": "Nintendogs", "size": 23960, "year": 2005}
+        {"name": "Duck Hunt", "size": 28300, "year": 1984, "bundle": true},
+        {"name": "Nintendogs", "size": 23960, "year": 2005, "bundle": true},
+        {"name": "Brain Age", "size": 19010, "year": 2005}
         ]
       },
       {"name": "Game Freak",
@@ -80,7 +81,7 @@
           {"name": "Pokémon Gold and Silver", "size": 23100, "year": 1999},
           {"name": "Pokémon Diamond and Pearl", "size": 17670, "year": 2006},
           {"name": "Pokémon Ruby and Sapphire", "size": 16220, "year": 2002},
-          {"name": "Pokémon X and Y", "size": 16200, "year": 2013},
+          {"name": "Pokémon X and Y", "size": 16260, "year": 2013},
           {"name": "Pokémon Sun and Moon", "size": 15910, "year": 2016},
           {"name": "Pokémon Black and White", "size": 15640, "year": 2010}
           ]
@@ -90,21 +91,11 @@
       ]
     },
 
-    {"name": "Sega",
-    "children": [
-      {"name": "Konami",
-      "children": [
-        {"name": "The Elder Scrolls V: Skyrim", "size": 30000, "year": 2011}
-        ]
-      }
-      ]
-    },
-
     {"name": "Bethesda Softworks",
     "children": [
       {"name": "Bethesda Game Studios",
       "children": [
-        {"name": "The Elder Scrolls",
+        {"name": "The Elder Scrolls Franchise",
         "children": [
           {"name": "The Elder Scrolls V: Skyrim", "size": 30000, "year": 2011}
           ]
@@ -128,17 +119,16 @@
       ]
     },
 
-
     {"name": "Activision",
     "children": [
       {"name": "Infinity Ward",
       "children": [
         {"name": "Call of Duty Franchise",
         "children": [
-          {"name": "Call of Duty: Modern Warfare 3", "size": 26500, "year": 2011},
-          {"name": "Call of Duty: Modern Warfare 2", "size": 22700, "year": 2009},
-          {"name": "Call of Duty: Ghosts", "size": 19000, "year": 2013},
-          {"name": "Call of Duty 4: Modern Warfare", "size": 15700, "year": 2007}
+          {"name": "Call of Duty: Modern Warfare 3", "size": 30710, "year": 2011, "bundle": true},
+          {"name": "Call of Duty: Modern Warfare 2", "size": 25000, "year": 2009, "bundle": true},
+          {"name": "Call of Duty: Ghosts", "size": 28100, "year": 2013},
+          {"name": "Call of Duty 4: Modern Warfare", "size": 17280, "year": 2007}
           ]}
         ]
       },
@@ -146,22 +136,32 @@
       "children": [
         {"name": "Call of Duty Franchise",
         "children": [
-          {"name": "Call of Duty: Black Ops", "size": 26200, "year": 2010},
-          {"name": "Call of Duty: Black Ops II", "size": 24200, "year": 2012},
+          {"name": "Call of Duty: Black Ops", "size": 30400, "year": 2010},
+          {"name": "Call of Duty: Black Ops II", "size": 29580, "year": 2012},
+          {"name": "Call of Duty: Black Ops III", "size": 26460, "year": 2012},
           {"name": "Call of Duty: World at War", "size": 15700, "year": 2008}
           ]}
         ]
-      }
+      },
+      {"name": "Sledgehammer Games",
+      "children": [
+        {"name": "Call of Duty Franchise",
+        "children": [
+          {"name": "Call of Duty: Advanced Warfare", "size": 21760, "year": 2014}
+        ]
+        }
       ]
+      }
+    ]
     },
 
     {"name": "Microsoft Studios",
-      "children": [
-        {"name": "Good Science Studio",
-          "children": [
-            {"name": "Kinect Adventures!", "size": 24000, "year": 2010}
-          ]
-        }
+    "children": [
+      {"name": "Good Science Studio",
+        "children": [
+          {"name": "Kinect Adventures!", "size": 24000, "year": 2010}
+        ]
+      }
       ]
     },
 
@@ -169,6 +169,83 @@
     "children": [
         {"name": "PlayerUnknown's Battlegrounds", "size": 24000, "year": 2017}
         ]
+    },
+
+    {"name": "Sega",
+    "children": [
+      {"name": "Konami",
+      "children": [
+        {"name": "Frogger", "size": 20000, "year": 1981}
+        ]
+      },
+      {"name": "Sonic Team",
+      "children": [
+        {"name": "Sonic the Hedgehog", "size": 15000, "year": 1991, "bundle": true}
+        ]
+      }
+      ]
+    },
+
+    {"name": "Psygnosis",
+    "children": [
+      {"name": "DMA Design",
+      "children": [
+        {"name": "Lemmings", "size": 20000, "year": 1991}
+        ]
+      }
+      ]
+    },
+
+    {"name": "505 Games",
+    "children": [
+      {"name": "Re-Logic",
+      "children": [
+        {"name": "Terraria", "size": 20000, "year": 2011}
+        ]
+      }
+      ]
+    },
+
+    {"name": "Electronic Arts",
+    "children": [
+      {"name": "Maxis",
+      "children": [
+        {"name": "The Sims", "size": 16000, "year": 2000}
+        ]
+      },
+      {"name": "EA Black Box",
+      "children": [
+        {"name": "Need for Speed Franchise",
+          "children": [
+            {"name": "Need for Speed: Most Wanted", "size": 16000, "year": 2005}
+          ]
+        }
+        ]
+      },
+      {"name": "EA DICE",
+      "children": [
+        {"name": "Battlefield Franchise",
+          "children": [
+            {"name": "Battlefield 3", "size": 15000, "year": 2011}
+          ]
+        }
+        ]
+      }
+      ]
+    },
+
+    {"name": "Sony Computer Entertainment",
+    "children": [
+      {"name": "Polyphony Digital",
+      "children": [
+        {"name": "Gran Turismo Franchise",
+          "children": [
+            {"name": "Gran Turismo 3: A-Spec", "size": 14890, "year": 2001, "bundle": true}
+          ]
+        }
+      ]
+      }
+      ]
     },
 
     {"name": "Number None",
