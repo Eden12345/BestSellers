@@ -67,17 +67,20 @@ body {
 
 
 section.wrapper {
-  height: 900px;
+  height: 860px;
   width: 100vw;
+  margin-top: 20px;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 svg {
-  margin-top: 50px;
+  margin-top: 0px;
   border-radius: 20px;
   font-weight: normal;
+  /* border: 1px solid black; */
 }
 
 
@@ -88,8 +91,9 @@ section.color-key {
   /* align-items: center; */
   /* width: 502px; */
   width: 700px;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   margin-bottom: 0px;
+  margin-left: 40px;
 }
 
 section.color-key > div {

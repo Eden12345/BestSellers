@@ -52,7 +52,7 @@ d3.json("data.json", function(error, root) {
 
     // GIVE BACKGROUND A COLOR
 
-    .style("background", color(-3))
+    .style("background", color(-25))
     .on("click", function() { zoom(root); });
 
   zoomTo([root.x, root.y, root.r * 2 + margin]);
