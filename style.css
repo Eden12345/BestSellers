@@ -48,7 +48,7 @@
 
 h1 {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   font-family: sans-serif;
   font-size: 44px;
   font-weight: lighter;
@@ -78,7 +78,6 @@ section.wrapper {
 }
 
 svg {
-  margin-top: 0px;
   border-radius: 20px;
   font-weight: normal;
   /* border: 1px solid black; */
@@ -164,6 +163,7 @@ section.color-key p {
 
 
 section.notes {
+  margin-top: 60px;
   width: 700px;
   display: flex;
   flex-direction: column;
