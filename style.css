@@ -141,7 +141,11 @@ section.color-key p {
   border: 2px solid #4ac0c9;
 }
 
-.custom-width {
+.single-width {
+  width: 350px;
+}
+
+.double-width {
   width: 300px;
 }
 
