@@ -167,8 +167,12 @@
 
     {"name": "Bluehole",
     "children": [
+      {"name": "PUBG Corporation",
+      "children": [
         {"name": "PlayerUnknown's Battlegrounds", "size": 30000, "year": 2017}
         ]
+      }
+      ]
     },
 
     {"name": "Sega",
